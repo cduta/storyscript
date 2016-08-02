@@ -1,0 +1,5 @@
+include_directories(${story_script_SOURCE_DIR}/include)
+aux_source_directory(${story_script_SOURCE_DIR}/src/Tests ALL_SOURCES)
+aux_source_directory(${story_script_SOURCE_DIR}/src/Tokens ALL_SOURCES)
+aux_source_directory(${story_script_SOURCE_DIR}/src ALL_SOURCES)
+add_executable(storyscript ${ALL_SOURCES})
