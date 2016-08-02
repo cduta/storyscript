@@ -2,15 +2,15 @@
 #define __INTEGER_TOKEN_HPP__
 
 #include "Token.hpp"
-#include "PrimitiveGroup.hpp"
 
 /**
  * @brief The IntegerToken class
  */
-class IntegerToken : public Token, public PrimitiveGroup
+class IntegerToken : public Token
 {
 public:
     virtual Type getType() const;
+    virtual Group getGroup() const;
 };
 
 #endif

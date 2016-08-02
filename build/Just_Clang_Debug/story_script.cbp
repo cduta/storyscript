@@ -121,19 +121,7 @@
       <Unit filename="/home/ryoga/LLVM/storyscript/include/Tokens/IntegerToken.hpp">
          <Option target="story_script"/>
       </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/include/Tokens/MiscGroup.hpp">
-         <Option target="story_script"/>
-      </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/include/Tokens/PrimitiveGroup.hpp">
-         <Option target="story_script"/>
-      </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/include/Tokens/SyntaxGroup.hpp">
-         <Option target="story_script"/>
-      </Unit>
       <Unit filename="/home/ryoga/LLVM/storyscript/include/Tokens/Token.hpp">
-         <Option target="story_script"/>
-      </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/include/Tokens/TokenGroup.hpp">
          <Option target="story_script"/>
       </Unit>
       <Unit filename="/home/ryoga/LLVM/storyscript/include/UTF8Character.hpp">
@@ -163,19 +151,7 @@
       <Unit filename="/home/ryoga/LLVM/storyscript/src/Tokens/IntegerToken.cpp">
          <Option target="storyscript"/>
       </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/src/Tokens/MiscGroup.cpp">
-         <Option target="storyscript"/>
-      </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/src/Tokens/PrimitiveToken.cpp">
-         <Option target="storyscript"/>
-      </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/src/Tokens/SyntaxToken.cpp">
-         <Option target="storyscript"/>
-      </Unit>
       <Unit filename="/home/ryoga/LLVM/storyscript/src/Tokens/Token.cpp">
-         <Option target="storyscript"/>
-      </Unit>
-      <Unit filename="/home/ryoga/LLVM/storyscript/src/Tokens/TokenGroup.cpp">
          <Option target="storyscript"/>
       </Unit>
       <Unit filename="/home/ryoga/LLVM/storyscript/src/UTF8Character.cpp">

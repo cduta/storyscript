@@ -15,3 +15,10 @@
 211	1985	0	src/CMakeFiles/storyscript.dir/main.cpp.o	129221745cea5933
 0	2117	0	src/CMakeFiles/storyscript.dir/Tests/UnitTests.cpp.o	b10937810da12084
 2117	2262	0	../../bin/storyscript	867aa5f5dd88df26
+0	245	0	src/CMakeFiles/storyscript.dir/Tokens/EndOfFileToken.cpp.o	46148c150d4e4909
+0	248	0	src/CMakeFiles/storyscript.dir/Tokens/IdentifierToken.cpp.o	f220710eb4878170
+0	263	0	src/CMakeFiles/storyscript.dir/Tokens/IntegerToken.cpp.o	8b9e1fb708d9ee97
+0	272	0	src/CMakeFiles/storyscript.dir/Tokens/ErrorToken.cpp.o	abe81d83f88986d9
+1	702	0	src/CMakeFiles/storyscript.dir/Lexer.cpp.o	370729ef9861f032
+1	1206	0	src/CMakeFiles/storyscript.dir/main.cpp.o	129221745cea5933
+1206	1384	0	../../bin/storyscript	3b3b911486750a7c

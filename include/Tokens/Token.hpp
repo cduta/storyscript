@@ -21,7 +21,16 @@ public:
         TOKEN_TYPE_COUNT
     };
 
+    enum Group
+    {
+        MISC_GROUP = 0,
+        SYNTAX_GROUP,
+        PRIMITIVE_GROUP,
+        TOKEN_GROUP_COUNT
+    };
+
     virtual Type getType() const = 0;
+    virtual Group getGroup() const = 0;
 };
 
 #endif

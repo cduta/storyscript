@@ -74,20 +74,8 @@ build src/CMakeFiles/storyscript.dir/Tests/UnitTest_Lexer.cpp.o: CXX_COMPILER__s
   INCLUDES = -Isrc -I../../src -I../../include
   OBJECT_DIR = src/CMakeFiles/storyscript.dir
   OBJECT_FILE_DIR = src/CMakeFiles/storyscript.dir/Tests
-build src/CMakeFiles/storyscript.dir/Tokens/SyntaxToken.cpp.o: CXX_COMPILER__storyscript ../../src/Tokens/SyntaxToken.cpp
-  DEP_FILE = src/CMakeFiles/storyscript.dir/Tokens/SyntaxToken.cpp.o.d
-  FLAGS = -lgtest -lpthread -g   -std=c++14
-  INCLUDES = -Isrc -I../../src -I../../include
-  OBJECT_DIR = src/CMakeFiles/storyscript.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/storyscript.dir/Tokens
 build src/CMakeFiles/storyscript.dir/Tokens/Token.cpp.o: CXX_COMPILER__storyscript ../../src/Tokens/Token.cpp
   DEP_FILE = src/CMakeFiles/storyscript.dir/Tokens/Token.cpp.o.d
-  FLAGS = -lgtest -lpthread -g   -std=c++14
-  INCLUDES = -Isrc -I../../src -I../../include
-  OBJECT_DIR = src/CMakeFiles/storyscript.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/storyscript.dir/Tokens
-build src/CMakeFiles/storyscript.dir/Tokens/PrimitiveToken.cpp.o: CXX_COMPILER__storyscript ../../src/Tokens/PrimitiveToken.cpp
-  DEP_FILE = src/CMakeFiles/storyscript.dir/Tokens/PrimitiveToken.cpp.o.d
   FLAGS = -lgtest -lpthread -g   -std=c++14
   INCLUDES = -Isrc -I../../src -I../../include
   OBJECT_DIR = src/CMakeFiles/storyscript.dir
@@ -98,20 +86,8 @@ build src/CMakeFiles/storyscript.dir/Tokens/EndOfFileToken.cpp.o: CXX_COMPILER__
   INCLUDES = -Isrc -I../../src -I../../include
   OBJECT_DIR = src/CMakeFiles/storyscript.dir
   OBJECT_FILE_DIR = src/CMakeFiles/storyscript.dir/Tokens
-build src/CMakeFiles/storyscript.dir/Tokens/MiscGroup.cpp.o: CXX_COMPILER__storyscript ../../src/Tokens/MiscGroup.cpp
-  DEP_FILE = src/CMakeFiles/storyscript.dir/Tokens/MiscGroup.cpp.o.d
-  FLAGS = -lgtest -lpthread -g   -std=c++14
-  INCLUDES = -Isrc -I../../src -I../../include
-  OBJECT_DIR = src/CMakeFiles/storyscript.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/storyscript.dir/Tokens
 build src/CMakeFiles/storyscript.dir/Tokens/IntegerToken.cpp.o: CXX_COMPILER__storyscript ../../src/Tokens/IntegerToken.cpp
   DEP_FILE = src/CMakeFiles/storyscript.dir/Tokens/IntegerToken.cpp.o.d
-  FLAGS = -lgtest -lpthread -g   -std=c++14
-  INCLUDES = -Isrc -I../../src -I../../include
-  OBJECT_DIR = src/CMakeFiles/storyscript.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/storyscript.dir/Tokens
-build src/CMakeFiles/storyscript.dir/Tokens/TokenGroup.cpp.o: CXX_COMPILER__storyscript ../../src/Tokens/TokenGroup.cpp
-  DEP_FILE = src/CMakeFiles/storyscript.dir/Tokens/TokenGroup.cpp.o.d
   FLAGS = -lgtest -lpthread -g   -std=c++14
   INCLUDES = -Isrc -I../../src -I../../include
   OBJECT_DIR = src/CMakeFiles/storyscript.dir
@@ -160,7 +136,7 @@ build src/CMakeFiles/storyscript.dir/main.cpp.o: CXX_COMPILER__storyscript ../..
 #############################################
 # Link the executable ../../bin/storyscript
 
-build ../../bin/storyscript: CXX_EXECUTABLE_LINKER__storyscript src/CMakeFiles/storyscript.dir/Tests/UnitTests.cpp.o src/CMakeFiles/storyscript.dir/Tests/UnitTest_Lexer.cpp.o src/CMakeFiles/storyscript.dir/Tokens/SyntaxToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/Token.cpp.o src/CMakeFiles/storyscript.dir/Tokens/PrimitiveToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/EndOfFileToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/MiscGroup.cpp.o src/CMakeFiles/storyscript.dir/Tokens/IntegerToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/TokenGroup.cpp.o src/CMakeFiles/storyscript.dir/Tokens/ErrorToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/IdentifierToken.cpp.o src/CMakeFiles/storyscript.dir/UTF8IStream.cpp.o src/CMakeFiles/storyscript.dir/UTF8Character.cpp.o src/CMakeFiles/storyscript.dir/Lexer.cpp.o src/CMakeFiles/storyscript.dir/main.cpp.o
+build ../../bin/storyscript: CXX_EXECUTABLE_LINKER__storyscript src/CMakeFiles/storyscript.dir/Tests/UnitTests.cpp.o src/CMakeFiles/storyscript.dir/Tests/UnitTest_Lexer.cpp.o src/CMakeFiles/storyscript.dir/Tokens/Token.cpp.o src/CMakeFiles/storyscript.dir/Tokens/EndOfFileToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/IntegerToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/ErrorToken.cpp.o src/CMakeFiles/storyscript.dir/Tokens/IdentifierToken.cpp.o src/CMakeFiles/storyscript.dir/UTF8IStream.cpp.o src/CMakeFiles/storyscript.dir/UTF8Character.cpp.o src/CMakeFiles/storyscript.dir/Lexer.cpp.o src/CMakeFiles/storyscript.dir/main.cpp.o
   FLAGS = -lgtest -lpthread -g
   LINK_LIBRARIES = -rdynamic
   OBJECT_DIR = src/CMakeFiles/storyscript.dir
