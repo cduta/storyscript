@@ -9,6 +9,8 @@
 class EndOfFileToken : public Token
 {
 public:
+    EndOfFileToken();
+
     virtual Type getType() const;
     virtual Group getGroup() const;
 };

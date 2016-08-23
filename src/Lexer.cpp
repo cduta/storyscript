@@ -1,5 +1,7 @@
 #include "Lexer.hpp"
 
+#include "Tokens/IdentifierToken.hpp"
+#include "Tokens/IntegerToken.hpp"
 #include "Tokens/EndOfFileToken.hpp"
 #include "Tokens/ErrorToken.hpp"
 #include "UTF8Character.hpp"
@@ -24,15 +26,57 @@ Token *Lexer::getToken(std::istream &stream)
     }
     else
     {
+        std::string currentTokenString = "";
+
         // [Alphabet][AlphaNumerical]*
-           // Specific Syntax:
-           // ...
-        // [Numerical]+
+        if(current.isAlphabet())
+        {
+            while(current.isAlphaNumeric())
+            {
+                currentTokenString.append(current.toString());
+                current = utf8Stream.getChar();
+            }
+
+            utf8Stream.ungetChar(current.getCharacterSize());
+
+            result = new IdentifierToken(currentTokenString);
+        }
+        else if(current.isNumeric()) // [Numerical]+
+        {
+            while(current.isNumeric())
+            {
+                currentTokenString.append(current.toString());
+                current = utf8Stream.getChar();
+            }
+
+            utf8Stream.ungetChar(current.getCharacterSize());
+
+            result = new IntegerToken(currentTokenString);
+        }
     }
 
     if(result == nullptr)
     {
-        result = new ErrorToken();
+        result = new ErrorToken("The given input was malformed.");
+    }
+
+    return result;
+}
+
+std::vector<Token *> Lexer::tokenize(std::istream &stream)
+{
+    std::vector<Token *> result;
+
+    Token *current = nullptr;
+
+    do {
+        current = Lexer::getToken(stream);
+        result.push_back(current);
+    } while(current->getType() != Token::END_OF_FILE && current->getType() != Token::ERROR);
+
+    if(current != nullptr && current->getType() == Token::ERROR)
+    {
+        // Error Output when tokenizer fails. (Malformed code)
     }
 
     return result;

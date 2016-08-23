@@ -9,17 +9,20 @@ UTF8Character::UTF8Character(bool isEndOfFile)
 
 UTF8Character::UTF8Character(char c1)
 {
+    this->endOfFile = false;
     this->utf8Character.append(1,c1);
 }
 
 UTF8Character::UTF8Character(char c1, char c2)
 {
+    this->endOfFile = false;
     this->utf8Character.append(1,c1);
     this->utf8Character.append(1,c2);
 }
 
 UTF8Character::UTF8Character(char c1, char c2, char c3)
 {
+    this->endOfFile = false;
     this->utf8Character.append(1,c1);
     this->utf8Character.append(1,c2);
     this->utf8Character.append(1,c3);
@@ -27,6 +30,7 @@ UTF8Character::UTF8Character(char c1, char c2, char c3)
 
 UTF8Character::UTF8Character(char c1, char c2, char c3, char c4)
 {
+    this->endOfFile = false;
     this->utf8Character.append(1,c1);
     this->utf8Character.append(1,c2);
     this->utf8Character.append(1,c3);

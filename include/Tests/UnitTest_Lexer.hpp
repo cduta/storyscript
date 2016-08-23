@@ -7,6 +7,7 @@
 
 #include "../UTF8Character.hpp"
 #include "../UTF8IStream.hpp"
+#include "../Lexer.hpp"
 
 TEST(UTF8CharacterTest, Ascii)
 {
@@ -53,6 +54,17 @@ TEST(UTF8CharacterTest, UTF8FourByte)
     EXPECT_TRUE(asciiFourByteUTF8Char.isAlphaNumeric());
 }
 
+TEST(UTF8CharacterTest, NumberTest)
+{
+    const char *ascii = "a1";
+    UTF8Character asciiUTF8Char(ascii[0]);
+    EXPECT_TRUE(asciiUTF8Char.isValid());
+    EXPECT_FALSE(asciiUTF8Char.isNumeric());
+    UTF8Character asciiUTF8Number(ascii[1]);
+    EXPECT_TRUE(asciiUTF8Number.isValid());
+    EXPECT_TRUE(asciiUTF8Number.isNumeric());
+}
+
 TEST(UTF8IStreamTest, GetAndPutBack)
 {
     std::stringstream sstream;
@@ -79,6 +91,44 @@ TEST(UTF8IStreamTest, GetAndPutBack)
     utf8Character = utf8Stream.getChar();
 
     EXPECT_EQ(utf8Character.toInteger(), 0xa3c4);
+}
+
+TEST(UTF8LexerTest, TokenizeOne)
+{
+    std::stringstream sstream;
+    sstream << u8"abcd\u0123";
+
+    std::vector<Token *> tokens = Lexer::tokenize(sstream);
+
+    EXPECT_EQ(tokens.size(), 2);
+    EXPECT_EQ(tokens[0]->getType(), Token::IDENTIFIER);
+    EXPECT_EQ(tokens[1]->getType(), Token::END_OF_FILE);
+}
+
+TEST(UTF8LexerTest, TokenizeTwo)
+{
+    std::stringstream sstream;
+    sstream << u8"abcd\u0123 123456";
+
+    std::vector<Token *> tokens = Lexer::tokenize(sstream);
+
+    EXPECT_EQ(tokens.size(), 3);
+    EXPECT_EQ(tokens[0]->getType(), Token::IDENTIFIER);
+    EXPECT_EQ(tokens[1]->getType(), Token::INTEGER);
+    EXPECT_EQ(tokens[2]->getType(), Token::END_OF_FILE);
+}
+
+TEST(UTF8LexerTest, TokenizeTwoWithCommentInBetween)
+{
+    std::stringstream sstream;
+    sstream << u8"abcd\u0123 /* THIS IS A COMMENT! */ 123456";
+
+    std::vector<Token *> tokens = Lexer::tokenize(sstream);
+
+    EXPECT_EQ(tokens.size(), 3);
+    EXPECT_EQ(tokens[0]->getType(), Token::IDENTIFIER);
+    EXPECT_EQ(tokens[1]->getType(), Token::INTEGER);
+    EXPECT_EQ(tokens[2]->getType(), Token::END_OF_FILE);
 }
 
 #endif

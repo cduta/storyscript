@@ -15,7 +15,7 @@ public:
     /**
      * @brief ignoreCommentsAndWhitespace
      *        Whitespace is defined through the function of <cctype> as: iscntrl or isspace.
-     *        Comments can either be // until the end of line or \/* until *\/ is found.
+     *        Comments can either be // until the end of line or / * until * / is found.
      * @return Returns false, in case something goes wrong and any of the possible comments or whitespaces are malformed.
      */
     bool ignoreCommentsAndWhitespace();

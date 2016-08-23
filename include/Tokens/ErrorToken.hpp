@@ -9,6 +9,8 @@
 class ErrorToken : public Token
 {
 public:
+    ErrorToken(const std::string errorDescriptionToken);
+
     virtual Type getType() const;
     virtual Group getGroup() const;
 };
