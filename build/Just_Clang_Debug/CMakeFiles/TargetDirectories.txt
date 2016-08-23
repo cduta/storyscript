@@ -1,6 +1,0 @@
-/home/ryoga/LLVM/storyscript/build/Just_Clang_Debug/CMakeFiles/edit_cache.dir
-/home/ryoga/LLVM/storyscript/build/Just_Clang_Debug/CMakeFiles/rebuild_cache.dir
-/home/ryoga/LLVM/storyscript/build/Just_Clang_Debug/CMakeFiles/story_script.dir
-/home/ryoga/LLVM/storyscript/build/Just_Clang_Debug/src/CMakeFiles/edit_cache.dir
-/home/ryoga/LLVM/storyscript/build/Just_Clang_Debug/src/CMakeFiles/rebuild_cache.dir
-/home/ryoga/LLVM/storyscript/build/Just_Clang_Debug/src/CMakeFiles/storyscript.dir
